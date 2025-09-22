@@ -1,7 +1,7 @@
 services:
   app:
     build:
-      context: ./
+      context: ./Lab03/blob/master
       dockerfile: Dockerfile
     depends_on:
       - db
