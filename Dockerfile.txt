@@ -12,6 +12,6 @@ COPY test_db/employees.sql /docker-entrypoint-initdb.d
 # Set the root password
 ENV MYSQL_ROOT_PASSWORD=waimar
 FROM openjdk:19
-COPY ./target/Lab03R1-1.0-SNAPSHOT.jar /tmp
+COPY ./target/classes/imc /tmp/imc
 WORKDIR /tmp
-ENTRYPOINT ["java", "-jar","Lab03R1-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "imc.com.App"]
