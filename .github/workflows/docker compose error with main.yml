@@ -19,7 +19,7 @@ jobs:
       - name: Build with Maven
         run: mvn package
       - name: Set up Docker Compose
-        uses: docker/setup-compose-action@v1
+        uses: docker/setup-compose-action@v2
       - name: Run services and wait
         run: docker compose -f ./docker-compose.yml up --abort-on-container-exit
         
