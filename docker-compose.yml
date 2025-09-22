@@ -1,7 +1,8 @@
 services:
   app:
-  build:
-       dockerfile: ./Dockerfile
+    build:
+      context: .
+      dockerfile: ./Dockerfile
 
   db:
     image: mysql:8.0.18
