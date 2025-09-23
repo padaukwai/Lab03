@@ -1,5 +1,5 @@
 # Use the latest MySQL image
-FROM mysql:8.0.18
+FROM mysql
 # Set the working directory
 WORKDIR /tmp
 # Copy all the files to the working directory of the container
@@ -10,8 +10,4 @@ COPY test_db/*.dump /tmp/
 # This is specific to MySQL.
 COPY test_db/employees.sql /docker-entrypoint-initdb.d
 # Set the root password
-ENV MYSQL_ROOT_PASSWORD=waimar
-FROM openjdk:19
-COPY ./target/classes/imc /tmp/imc
-WORKDIR /tmp
-ENTRYPOINT ["java", "imc.com.App"]
+ENV MYSQL_ROOT_PASSWORD example
